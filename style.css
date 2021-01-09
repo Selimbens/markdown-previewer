@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+header {
+    padding: 4px;
+    background-color: #fcfcfc;
+}
+.center-text {
+    text-align: center;
+}
+
+main {
+    background-color: #efefef;
+    min-height: 100vh;
+}
+
+.boards {
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
+
+.board {
+    background-color: #86aa74;
+    width: 50%;
+    margin: 6px;
+    padding: 20px;
+}
+
+#editor {
+    background-color: #ffffff;
+    margin: 6px;
+    padding: 20px;
+    border: none;
+    resize: none;
+    border-radius: 20px;
+    width: 50%;
+    height: 90vh;
+}
+
+
+
+
