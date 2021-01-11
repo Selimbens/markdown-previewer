@@ -7,4 +7,4 @@ class Preview extends React.Component {
 }
 
 const domContainer = document.querySelector('#preview');
-ReactDOM.render(/*Preview*/'Hi there', domContainer);
+ReactDOM.render(Preview, domContainer);
