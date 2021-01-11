@@ -16,7 +16,7 @@ header {
 
 main {
     background-color: #efefef;
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 .boards {
@@ -41,5 +41,5 @@ main {
     resize: none;
     border-radius: 20px;
     width: 50%;
-    height: 90vh;
+    height: 80vh;
 }
