@@ -53,6 +53,14 @@ td, th {
   border-radius: 2px;
 }
 
+blockquote {
+  font-size: 1.1rem;
+  border-left: solid 4px white;
+  color: #222;
+  background-color: lightgray;
+  padding: 1px 12px;
+}
+
 #editor {
   background-color: #ffffff;
   margin: 6px;
