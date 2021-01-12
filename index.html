@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <title>Markdown Previewer</title>
     <link href="style.css" rel="stylesheet">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.7/marked.js" integrity="sha512-jwq2hFT92zJpzbvtN/lkPADAWkwS7K5RRR9fpdAmCc9+qCbYvjrZ6cxMHuaWx2CDzUc24bk6i4a6zc8Z75/kfQ==" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <header>
         <nav>
             <h1 class="center-text">Markdown Previewer</h1>
@@ -16,18 +17,16 @@
     </header>
     <main>
         <div class="boards">
-
-          <textarea id="editor" placeholder="Type text in markdown here..."></textarea>
-
+          <textarea id="editor" placeholder="Type text in markdown here..." onkeyup="getText()"></textarea>
           <div id="preview" class="board"></div>
-
         </div>
     </main>
-
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-    <!-- Load our React component. -->
-    <script src="preview.js"></script>
+    <script type="text/javascript">
+      let text = document.querySelector('#editor').value
+      const getText = () => {
+        text = document.querySelector('#editor').value
+        document.querySelector('#preview').innerHTML = marked(text)
+      }
+      getText()
+    </script>
 </body></html>
