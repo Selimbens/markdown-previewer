@@ -8,6 +8,11 @@ header {
   width: 100%;
   padding: 4px;
   background-color: #fcfcfc;
+  border-bottom: solid 1px #e3e3e3;
+}
+
+p, code, li{
+  margin: 1rem 0;
 }
 
 .center-text {
@@ -33,6 +38,19 @@ main {
   margin: 6px;
   padding: 20px;
   border-radius: 4px;
+}
+
+pre {
+  border-radius: 5px;
+  padding: 8px;
+  color: white;
+  background-color: rgba(23, 46, 55, 0.80);
+}
+
+td, th {
+  padding: 8px;
+  background-color: #DDD;
+  border-radius: 2px;
 }
 
 #editor {
