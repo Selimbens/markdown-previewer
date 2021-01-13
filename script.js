@@ -42,11 +42,3 @@ And here. | Okay. | I think we get it.
 
 ![React Logo w/ Text](https://goo.gl/Umyytc)
 `;
-
-function carRet(paragraph) {
-  paragraph.split('').map((x) => {
-    if (x.charCodeAt() == 13) {
-      return '<br>'
-    } return x
-  })
-}
