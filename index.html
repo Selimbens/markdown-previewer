@@ -2,37 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Markdown Previewer</title>
-    <link href="style.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.7/marked.js" integrity="sha512-jwq2hFT92zJpzbvtN/lkPADAWkwS7K5RRR9fpdAmCc9+qCbYvjrZ6cxMHuaWx2CDzUc24bk6i4a6zc8Z75/kfQ==" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>Markdown Previewer</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.7/marked.js" integrity="sha512-jwq2hFT92zJpzbvtN/lkPADAWkwS7K5RRR9fpdAmCc9+qCbYvjrZ6cxMHuaWx2CDzUc24bk6i4a6zc8Z75/kfQ==" crossorigin="anonymous"></script>
 
 </head>
 
 <body onload="first()">
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <header>
-        <nav>
-            <h1 class="center-text">Markdown Previewer</h1>
-        </nav>
-    </header>
-    <main>
-        <div class="boards">
-          <textarea id="editor" placeholder="Type text in markdown here..." onkeyup="getText()"></textarea>
-          <div id="preview" class="board"></div>
-        </div>
-    </main>
-    <script type="text/javascript">
-      function first() {
-        document.getElementById('editor').value = initialText;
-        getText()
-      }
-      const getText = () => {
-        let text = document.querySelector('#editor').value
-        document.querySelector('#preview').innerHTML = marked(text)
-      }
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <header>
+    <nav>
+      <h1 class="center-text">Markdown Previewer</h1>
+    </nav>
+  </header>
+  <main>
+    <div class="boards">
+      <textarea id="editor" placeholder="Type text in markdown here..." onkeyup="getText()" onchange="getText()"></textarea>
+      <div id="preview" class="board"></div>
+    </div>
+  </main>
+  <script type="text/javascript">
+  
+    function first() {
+      document.getElementById('editor').value = initialText;
       getText()
-    </script>
+    }
+    const getText = () => {
+      let text = document.querySelector('#editor').value
+      document.querySelector('#preview').innerHTML = marked(text)
+    }
+    getText()
+  </script>
 
-</body></html>
+</body>
+
+</html>
